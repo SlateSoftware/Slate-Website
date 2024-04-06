@@ -13,33 +13,34 @@ const config: Config = {
       "light-bg-floating-window":
         "linear-gradient(to bottom, rgba(237, 237, 237, 0.8),rgba(250, 254, 255, 0.75))",
       // Foreground
-      fg: "linear-gradient(to bottom, rgba(255, 255, 255, 0.29), rgba(255, 255, 255, 0.24))",
-      "fg-subtle":
+      "light-fg":
+        "linear-gradient(to bottom, rgba(255, 255, 255, 0.29), rgba(255, 255, 255, 0.24))",
+      "light-fg-subtle":
         "linear-gradient(to bottom, rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.17))",
-      "fg-no-bg":
+      "light-fg-no-bg":
         "linear-gradient(to bottom, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.53))",
       // Coloured foreground
-      "fg-selected":
+      "light-fg-selected":
         "linear-gradient(to bottom, rgba(220, 245, 255, 0.64), rgba(207, 242, 255, 0.49))",
-      "fg-selected-2":
+      "light-fg-selected-2":
         "linear-gradient(to bottom, rgba(241, 251, 255, 0.58), rgba(236, 249, 255, 0.45))",
-      "fg-danger":
+      "light-fg-danger":
         "linear-gradient(to bottom, rgba(227, 106, 128, 0.46), rgba(192, 0, 34, 0.42)",
-      "fg-warning":
+      "light-fg-warning":
         "linear-gradient(to bottom, rgba(255, 237, 141, 0.35), rgba(255, 227, 84, 0.29))",
-      "fg-success":
+      "light-fg-success":
         "linear-gradient(to bottom, rgba(156, 224, 163, 0.56), rgba(33, 217, 51, 0.38))",
-      "fg-accent-blue":
+      "light-fg-accent-blue":
         "linear-gradient(to bottom, rgba(0, 178, 255, 0.45), rgba(0, 178, 255, 0.63))",
-      "fg-accent-red":
+      "light-fg-accent-red":
         "linear-gradient(to bottom, rgba(225, 22, 58, 0.41), rgba(225, 22, 58, 0.49))",
-      "fg-accent-yellow":
+      "light-fg-accent-yellow":
         "linear-gradient(to bottom, rgba(255, 216, 13, 0.38), rgba(255, 213, 0, 0.44))",
-      "fg-accent-green":
+      "light-fg-accent-green":
         "linear-gradient(to bottom, rgba(33, 217, 51, 0.37), rgba(33, 217, 51, 0.53))",
-      "fg-accent-purple":
+      "light-fg-accent-purple":
         "linear-gradient(to bottom, rgba(33, 217, 51, 0.53), rgba(119, 25, 238, 0.46))",
-      "fg-accent-gray":
+      "light-fg-accent-gray":
         "linear-gradient(to bottom, rgba(200, 200, 200, 0.52), rgba(168, 168, 168, 0.38))",
     },
     colors: {
@@ -53,7 +54,7 @@ const config: Config = {
       "light-gray-flat": "rgba(160, 160, 160, 1)",
       // Background
       "light-bg-flat": "rgba(227, 227, 227, 1)",
-      // Strokes (aka borders) (unfinished) (css sadly doesn't support gradient borders)
+      // Strokes (aka borders) (unfinished, no coloured versions yet) (css sadly doesn't support gradient borders)
       "light-stroke-fg": "rgba(0, 0, 0, 0.15)",
       "light-stroke-fg-disabled": "rgba(0, 0, 0, 0.07)",
       "light-stroke-fg-2": "rgba(0, 0, 0, 0.10)",
@@ -125,6 +126,38 @@ const config: Config = {
     backdropBlur: {
       "bg-floating-window": "36px",
       fg: "12px",
+    },
+    extend: {
+      transitionTimingFunction: {
+        "slate-out": "cubic-bezier(.14,.02,.09,.92)",
+      },
+      keyframes: {
+        slideDownAndFade: {
+          from: { opacity: "0", transform: "translateY(-2px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        slideLeftAndFade: {
+          from: { opacity: "0", transform: "translateX(2px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        slideUpAndFade: {
+          from: { opacity: "0", transform: "translateY(2px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        slideRightAndFade: {
+          from: { opacity: "0", transform: "translateX(-2px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        slideDownAndFade:
+          "slideDownAndFade 400ms cubic-bezier(.14,.02,.09,.92)",
+        slideLeftAndFade:
+          "slideLeftAndFade 400ms cubic-bezier(.14,.02,.09,.92)",
+        slideUpAndFade: "slideUpAndFade 400ms cubic-bezier(.14,.02,.09,.92)",
+        slideRightAndFade:
+          "slideRightAndFade 400ms cubic-bezier(.14,.02,.09,.92)",
+      },
     },
   },
   plugins: [],

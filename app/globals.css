@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 .h1 {
-  @apply text-1 text-light-text-1 font-medium font-sans leading-[108.5%];
+  @apply text-1 font-medium font-sans leading-[108.5%];
 }
 .h2 {
-  @apply text-2 text-light-text-1 font-medium font-sans leading-[108.5%];
+  @apply text-2 font-medium font-sans leading-[108.5%];
 }
 .h3 {
-  @apply text-3 text-light-text-1 font-medium font-sans leading-[108.5%];
+  @apply text-3 font-medium font-sans leading-[108.5%];
 }
 .h4 {
-  @apply text-4 text-light-text-1 font-medium font-sans leading-[109%];
+  @apply text-4 font-medium font-sans leading-[109%];
 }
 .h5 {
-  @apply text-5 text-light-text-1 font-medium font-sans leading-[109%];
+  @apply text-5 font-medium font-sans leading-[109%];
 }
 .body-strong {
-  @apply text-body-strong text-light-text-1 font-semibold font-sans leading-[155%];
+  @apply text-body-strong font-semibold font-sans leading-[155%];
 }
 .body {
-  @apply text-body text-light-text-1 font-normal font-sans leading-[155%];
+  @apply text-body font-normal font-sans leading-[155%];
 }
 .sub {
-  @apply text-sub text-light-text-1 font-normal font-sans leading-[108.5%];
+  @apply text-sub font-normal font-sans leading-[108.5%];
 }
 .mono {
-  @apply text-mono text-light-text-1 font-normal font-mono leading-[130%];
+  @apply text-mono font-normal font-mono leading-[130%];
 }

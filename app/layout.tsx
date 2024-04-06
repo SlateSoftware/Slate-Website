@@ -1,3 +1,4 @@
+import Nav from "@/components/Nav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Viewport } from "next";
@@ -5,6 +6,7 @@ import { Viewport } from "next";
 // Fonts (connects to tailwind config)
 
 import { DM_Sans, DM_Mono } from "next/font/google";
+import Footer from "@/components/Footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -79,7 +81,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} ${dmMono.variable}`}>
-      <body>{children}</body>
+      <body className="bg-light-bg-flat p-16 flex flex-col gap-12">
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

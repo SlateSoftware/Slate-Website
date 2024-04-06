@@ -1,14 +1,41 @@
-import { LogoMark } from "@/components/brand/LogoMark";
-import { TextMark } from "@/components/brand/TextMark";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="bg-light-bg-flat min-h-screen w-screen p-32 flex flex-col gap-32">
-      <LogoMark colour="black" size={256} />
-      <TextMark colour="black" size={256} />
-      <h3 className="h3">Heading 1</h3>
-      <p className="mono">console.log("Hello World!")</p>
-      <div className="mt-[32px] bg-fg h-512 rounded-32 border border-light-stroke-fg shadow-light-fg"></div>
+    <main>
+      <section className="flex gap-12 h-[88vh] w-full">
+        <Link
+          href={""}
+          className="group p-48 w-full flex items-end gap-16 border border-light-stroke-fg rounded-12 rounded-bl-32 bg-[url(/desktop-one-dash.png)] bg-cover bg-left justify-between
+        hover:scale-95 duration-200 ease-slate-out active:scale-75"
+        >
+          <h1 className="h1 text-[#ffffff] mix-blend-difference group-hover:scale-105 duration-200 ease-slate-out">
+            Slate Desktop One
+          </h1>
+          <ArrowUpRightIcon className="text-[#ffffff] size-24 mix-blend-difference group-hover:scale-105 group-hover:rotate-45 duration-200 ease-slate-out" />
+        </Link>
+        <Link
+          href={""}
+          className="group p-48 w-full flex items-end gap-16 border border-light-stroke-fg rounded-12 bg-[url(/design-one-promo.png)] bg-cover bg-left justify-between
+        hover:scale-95 duration-200 ease-slate-out active:scale-75"
+        >
+          <h1 className="h1 text-[#ffffff] mix-blend-difference group-hover:scale-105 duration-200 ease-slate-out">
+            Slate Design Kit One
+          </h1>
+          <ArrowUpRightIcon className="text-[#ffffff] size-24 mix-blend-difference group-hover:scale-105 group-hover:rotate-45 duration-200 ease-slate-out" />
+        </Link>
+        <Link
+          href={""}
+          className="group p-48 w-full flex items-end gap-16 border border-light-stroke-fg rounded-12 rounded-br-32 bg-[url(/brand-promo.png)] bg-cover bg-left justify-between
+        hover:scale-95 duration-200 ease-slate-out active:scale-75"
+        >
+          <h1 className="h1 text-[#ffffff] mix-blend-difference group-hover:scale-105 duration-200 ease-slate-out">
+            About Us
+          </h1>
+          <ArrowUpRightIcon className="text-[#ffffff] size-24 mix-blend-difference group-hover:scale-105 group-hover:rotate-45 duration-200 ease-slate-out" />
+        </Link>
+      </section>
     </main>
   );
 }
