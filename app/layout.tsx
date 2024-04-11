@@ -2,11 +2,12 @@ import Nav from "@/components/Nav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Viewport } from "next";
+import Footer from "@/components/Footer";
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 // Fonts (connects to tailwind config)
 
 import { DM_Sans, DM_Mono } from "next/font/google";
-import Footer from "@/components/Footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -80,14 +81,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${dmSans.variable} ${dmMono.variable} overflow-x-hidden`}
-    >
+    <html lang="en" className={`${dmSans.variable} ${dmMono.variable}`}>
       <body className="bg-light-bg-flat p-16 flex flex-col gap-12 overflow-x-hidden">
-        <Nav />
-        {children}
-        <Footer />
+        <SmoothScrolling>
+          <Nav />
+          {children}
+          <Footer />
+        </SmoothScrolling>
       </body>
     </html>
   );

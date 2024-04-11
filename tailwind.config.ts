@@ -70,9 +70,7 @@ const config: Config = {
       "light-stroke-fg-accent-yellow": "rgba(207, 176, 15, 0.81)",
       "light-stroke-fg-accent-green": "rgba(26, 181, 41, 0.62)",
       "light-stroke-fg-accent-purple": "rgba(71, 10, 149, 0.67)",
-    },
-    textColor: {
-      // ---- LIGHT MODE ----
+      // Text Colour
       "light-text": "rgba(28, 28, 28, 1)",
       "light-text-subtle": "rgba(11, 11, 11, 0.65)",
       "light-text-disabled": "rgba(28, 28, 28, 0.4)",
@@ -175,6 +173,5 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
 };
 export default config;

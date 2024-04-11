@@ -10,7 +10,9 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <nav className="flex z-50 backdrop-blur-fg justify-between sticky top-16 px-128 py-12 items-center bg-light-fg-no-bg shadow-light-fg border border-light-stroke-fg rounded-t-32 rounded-b-12">
-      <LogoMark colour="black" size={36} />
+      <Link href={"/"}>
+        <LogoMark colour="black" size={36} />
+      </Link>
       <div className="flex gap-28">
         <Link href={""} className="flex gap-6">
           <p className="body">Home</p>
