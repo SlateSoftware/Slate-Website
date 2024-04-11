@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <section className="flex gap-12 h-[88vh] w-full">
+      <section className="flex gap-12 h-[80vh] w-full">
         <Link
-          href={""}
+          href={"/desktop"}
           className="group p-48 w-full flex items-end gap-16 border border-light-stroke-fg rounded-12 rounded-bl-32 bg-[url(/desktop-one-dash.png)] bg-cover bg-left justify-between
         hover:scale-95 duration-200 ease-slate-out active:scale-75"
         >

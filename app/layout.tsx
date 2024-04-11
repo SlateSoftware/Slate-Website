@@ -80,8 +80,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${dmMono.variable}`}>
-      <body className="bg-light-bg-flat p-16 flex flex-col gap-12">
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${dmMono.variable} overflow-x-hidden`}
+    >
+      <body className="bg-light-bg-flat p-16 flex flex-col gap-12 overflow-x-hidden">
         <Nav />
         {children}
         <Footer />
